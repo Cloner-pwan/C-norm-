@@ -1,0 +1,75 @@
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <math.h>
+using namespace std;
+
+int main () {
+	
+	
+	int a , b , c;
+	cout << "Enter the a , b , c" << endl;
+	cout << "a = ";
+	cin >> a;
+	cout << "b = ";
+	cin>> b;
+	cout << "c = ";
+	cin >> c;
+	
+	// Calculate Delta
+	int Delta;
+	Delta = (b * b) - (a * c * 4);
+	cout << "Delta = " << Delta << endl;
+	
+		if (Delta < 0) {
+			cout << "There is no genuine answer for this equation.because the delta is negative.\n" << endl;
+			main();
+	}
+	
+		if (Delta == 0) {
+			cout << "There is only one genuine answer for this equation.";
+		}
+		
+		
+	//int x = sqrt(y);
+	// Calculate root
+	cout << "Your Delta root is: ";
+	int Root = sqrt(Delta);
+	cout << Root;
+	
+	
+	//calculate divide & above
+	cout << "\nDivide: ";
+	double Divide = 2 * a; // bottom
+	cout << Divide;
+	
+	// Positive above
+	cout << "\nPositive above: ";
+	int x = -b + Root; 
+	cout << x;
+
+	// Negative above
+	cout << "\nNegative above: ";
+	int x_n = -b - Root; // above
+	cout << x_n;
+	
+	// calculate positive x
+	cout << "\nX with positive is equal to: ";
+	double answer = x / Divide;
+	cout << answer;
+	
+	
+	//calculate negative x  
+	cout << "\nX with negative is equal to: ";
+	double answer_n = x_n / Divide;
+	cout << answer_n;
+
+
+	// 33 lines
+
+
+
+
+
+
+}
